@@ -1,0 +1,14 @@
+.button {
+    &.is-text {
+        text-decoration: none;
+    }
+
+    &.is-square {
+        padding: $control-padding-vertical;
+
+        .svg-icon {
+            min-height: $control-line-height;
+            min-width: $control-line-height;
+        }
+    }
+}

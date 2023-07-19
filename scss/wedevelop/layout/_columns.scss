@@ -1,0 +1,75 @@
+//=======================================================
+//  COLUMNS
+//
+//  Fixes a responsive behaviour bulma does, that doesn't
+//  fit our grid module
+//=======================================================
+@media (min-width: $desktop) {
+    .columns {
+        @each $name, $value in $column-gaps {
+            &.has-gap-#{$name}-desktop,
+            &.has-gap-x-#{$name}-desktop {
+                margin-left: -$value;
+                margin-right: -$value;
+
+                > .column {
+                    padding-left: $value;
+                    padding-right: $value;
+                }
+            }
+
+            &.has-gap-#{$name}-desktop,
+            &.has-gap-y-#{$name}-desktop {
+                margin-top: -$value;
+
+                &:last-child {
+                    margin-bottom: -$value;
+                }
+
+                > .column {
+                    padding-top: $value;
+                    padding-bottom: $value;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    &.is-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.column {
+    width: 100%;
+    flex-basis: auto;
+    flex-grow: unset;
+    flex-shrink: 0;
+
+    // ADD BULMA DEFAULT COLUMN CLASS
+    &.is-fill {
+        width: unset;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
+
+//=======================================================
+//  COLUMN BREAKOUTS FOR CONTENT ELEMENTS
+//=======================================================
+@media screen and (min-width: $fullhd) {
+    .has-breakout-left {
+        .image {
+            margin-left: -$offset-width;
+        }
+    }
+
+    .has-breakout-right {
+        .image {
+            margin-right: -$offset-width;
+        }
+    }
+}

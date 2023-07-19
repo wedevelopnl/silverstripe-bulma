@@ -1,0 +1,77 @@
+.field {
+    margin-bottom: 0.5rem;
+
+    &.dropdown {
+        display: block;
+
+        .middleColumn {
+            position: relative;
+
+            select {
+                padding-right: 2.5rem;
+            }
+
+            &::after {
+                content: "";
+                width: 0.65rem;
+                height: 0.65rem;
+                position: absolute;
+                top: calc(50% - 0.500rem);
+                right: 1rem;
+                border: 2px solid $text;
+                border-bottom: none;
+                border-left: none;
+                transform: rotate(135deg);
+                pointer-events: none;
+            }
+        }
+    }
+
+    &.file {
+        display: block;
+    }
+
+    &.checkbox,
+    &.radio {
+        label,
+        .label {
+            display: inline;
+            font-weight: unset;
+        }
+    }
+
+    &.textarea {
+        display: inline;
+        outline: none;
+        border: 0;
+        padding: 0;
+    }
+}
+
+select,
+input:not([type="radio"]):not([type="checkbox"]) {
+    @extend .input;
+}
+
+textarea {
+    @extend .textarea;
+}
+
+label {
+    &.left {
+        @extend .label;
+    }
+}
+
+select {
+    @extend .select;
+}
+
+.btn-toolbar {
+    margin-top: 1rem;
+
+    .action {
+        @extend .button;
+        @extend .is-primary;
+    }
+}

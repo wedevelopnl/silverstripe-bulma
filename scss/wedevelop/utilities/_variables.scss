@@ -1,0 +1,156 @@
+//=======================================================
+//  WEDEVELOP VARIABLES
+//=======================================================
+// CUSTOM COLUMN GAPS
+$column-gaps: (
+    "none":                     0px,
+    "small":                    12px,
+    "normal":                   $column-gap,
+    "medium":                   28px,
+    "large":                    48px,
+    "larger":                   60px,
+);
+
+// SECTIONS
+$section-padding-smallest: 10px !default;
+$section-padding-smaller: 30px !default;
+$section-padding-small: 50px !default;
+$section-padding-normal: 75px !default;
+$section-padding-medium: 100px !default;
+$section-padding-large: 125px !default;
+$section-padding-larger: 175px !default;
+
+$section-padding-mobile: $section-padding-small !default;
+
+$sectionPaddings: (
+    "none": 0,
+    "smallest": $section-padding-smallest,
+    "smaller": $section-padding-smaller,
+    "small": $section-padding-small,
+    "normal": $section-padding-normal,
+    "medium": $section-padding-medium,
+    "large": $section-padding-large,
+    "larger": $section-padding-larger,
+) !default;
+
+// NAV
+$list-gutter-smallest: 5px !default;
+$list-gutter-smaller: 10px !default;
+$list-gutter-small: 15px !default;
+$list-gutter-normal: 30px !default;
+$list-gutter-medium: 40px !default;
+$list-gutter-large: 50px !default;
+$list-gutter-larger: 75px !default;
+
+$list-gutters: (
+    "none": 0,
+    "smallest": $list-gutter-smallest,
+    "smaller": $list-gutter-smaller,
+    "small": $list-gutter-small,
+    "normal": $list-gutter-normal,
+    "medium": $list-gutter-medium,
+    "large": $list-gutter-large,
+    "larger": $list-gutter-larger,
+) !default;
+
+// INDEXES
+$indexes: (
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+) !default;
+
+// ORDERS
+$orders: (
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+) !default;
+
+// OPACITIES
+$opacities: (
+    "10": 0.1,
+    "20": 0.2,
+    "25": 0.25,
+    "30": 0.3,
+    "40": 0.4,
+    "50": 0.5,
+    "60": 0.6,
+    "70": 0.7,
+    "75": 0.75,
+    "80": 0.8,
+    "90": 0.9,
+    "100": 1
+) !default;
+
+// VISUALS
+$visual-height-smaller: 150px;
+$visual-height-small: 250px;
+$visual-height-normal: 420px;
+$visual-height-medium: 500px;
+$visual-height-large: 750px;
+$visual-height-larger: 850px;
+
+$visual-overlay: rgba($black, 0.4);
+
+$visualSizes: (
+    "none": 0,
+    "smaller": $visual-height-smaller,
+    "small": $visual-height-small,
+    "normal": $visual-height-normal,
+    "medium": $visual-height-medium,
+    "large": $visual-height-large,
+    "larger": $visual-height-larger,
+    "full-screen": 100vh,
+) !default;
+
+// TRANSITIONS
+$transition-time: 0.25s;
+$transition-animation: ease-out;
+$transition-1: all $transition-time $transition-animation;
+
+// BORDER
+$border-size-1: 1px;
+$border-1: $border-size-1 solid $border;
+
+// GRID
+$column-gap-large:              2rem !default;
+$offset-width:                  96px !default;
+
+// Card
+$card-content-padding:          2rem !default;
+
+// Offcanvas
+$backdrop:                      rgba($black, 0.5) !default;
+$offcanvas-width:               350px !default;
+$offcanvas-brand-height:        35px !default;
+
+// Controls
+// Small
+$control-padding-vertical-small:    0.75rem !default;
+$control-padding-horizontal-small:  1rem !default;
+$control-line-height-small:         1.25rem !default;
+$control-font-size-small:           0.9rem !default;
+
+// Normal
+$control-padding-vertical:          0.85rem !default;
+$control-padding-horizontal:        1.25rem !default;
+$control-line-height:               1.35rem !default;
+$control-font-size:                 1rem !default;
+
+// Large
+$control-padding-vertical-large:    1rem !default;
+$control-padding-horizontal-large:  1.5rem !default;
+$control-line-height-large:         1.75rem !default;
+$control-font-size-large:           1.25 !default;
+
+$control-sizes: (
+    "small":                        ($control-padding-vertical-small, $control-padding-horizontal-small, $control-line-height-small, $control-font-size-small),
+    "normal":                       ($control-padding-vertical, $control-padding-horizontal, $control-line-height, $control-font-size),
+    "large":                        ($control-padding-vertical-large, $control-padding-horizontal-large, $control-line-height-large, $control-font-size-large),
+) !default;
+
+// Colors
+$custom-colors: (
+    "transparent": (hsla(0,0,0,0), $text),
+) !default;
+
+$colors: map-merge($colors, $custom-colors) !default;
+
+$extra-letter-spacing:              2px !default;

@@ -1,0 +1,25 @@
+{
+  "name": "silverstripe-bulma",
+  "version": "1.0.0",
+  "description": "Add-on for SilverStripe CMS to make use of Bulma CSS framework and tweaks",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass ./scss/main.scss:./css/main.css --watch --no-source-map --style compressed",
+    "client": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wedevelopnl/silverstripe-bulma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/wedevelopnl/silverstripe-bulma/issues"
+  },
+  "homepage": "https://github.com/wedevelopnl/silverstripe-bulma#readme",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "sass": "^1.49.9"
+  }
+}
