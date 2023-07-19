@@ -1,9 +1,8 @@
 //=======================================================
 //  CONTENT
 //=======================================================
-strong  {
+strong {
     color: unset;
-    font-weight: $weight-semibold;
 }
 
 address {
@@ -14,54 +13,39 @@ address {
 //  TITLES
 //=======================================================
 .title,
-h1,
 .content h1,
-h2,
 .content h2,
-h3,
 .content h3,
-h4,
 .content h4,
-h5,
 .content h5,
-h6,
 .content h6 {
     font-family: $title-family;
     font-weight: $title-weight;
     color: unset;
-    margin-bottom: $block-spacing;
+}
 
-    &:last-child {
-        margin-bottom: 0;
+.content {
+    h1 {
+        font-size: $content-h1-size;
     }
-}
 
-.content h1,
-h1.title {
-    font-size: $size-1;
-}
+    h2 {
+        font-size: $content-h2-size;
+    }
 
-.content h2,
-h2.title {
-    font-size: $size-2;
-}
+    h3 {
+        font-size: $content-h3-size;
+    }
 
-.content h3,
-h3.title {
-    font-size: $size-3;
-}
+    h4 {
+        font-size: $content-h4-size;
+    }
 
-.content h4,
-h4.title {
-    font-size: $size-4;
-}
+    h5 {
+        font-size: $content-h5-size;
+    }
 
-.content h5,
-h5.title {
-    font-size: $size-5;
-}
-
-.content h6,
-h6.title {
-    font-size: $size-6;
+    h6 {
+        font-size: $content-h6-size;
+    }
 }

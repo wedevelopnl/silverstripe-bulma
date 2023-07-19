@@ -55,12 +55,6 @@ $visual-sizes: (
     "full-screen":      100vh,
 ) !default;
 
-$control-sizes: (
-    "small":            ($control-padding-vertical-small, $control-padding-horizontal-small, $control-line-height-small, $control-font-size-small),
-    "normal":           ($control-padding-vertical, $control-padding-horizontal, $control-line-height, $control-font-size),
-    "large":            ($control-padding-vertical-large, $control-padding-horizontal-large, $control-line-height-large, $control-font-size-large),
-) !default;
-
 $spacing-values: (
     "0":                0,              // 0px
     "1":                0.125rem,       // 2px
@@ -96,6 +90,6 @@ $button-sizes: (
     "smaller":          ($button-height-smaller, $button-font-size-small),
     "small":            ($button-height-small, $button-font-size-normal),
     "normal":           ($button-height-normal, $button-font-size-normal),
-    "medium":           ($button-height-medium, $button-font-size-large) ,
-    "large":            ($button-height-large, $button-font-size-large),
+    "medium":           ($button-height-medium, $button-font-size-medium) ,
+    "large":            ($button-height-large, $button-font-size-medium),
 )

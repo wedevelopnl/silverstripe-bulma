@@ -13,13 +13,23 @@ $button-height-medium:                     $button-font-size-normal + 2.5rem !de
 $button-height-large:                      $button-font-size-medium + 2.75rem  !default;    // 64px
 
 //=======================================================
+//  CONTENT TITLE SIZES
+//=======================================================
+$content-h1-size:                   $size-2 !default;
+$content-h2-size:                   $size-3 !default;
+$content-h3-size:                   $size-4 !default;
+$content-h4-size:                   $size-5 !default;
+$content-h5-size:                   $size-6 !default;
+$content-h6-size:                   $size-7 !default;
+
+//=======================================================
 //  COLUMN GAPS
 //=======================================================
 $column-gap-none:                   0 !default;
 $column-gap-smallest:               0.25rem !default;
 $column-gap-smaller:                0.5rem !default;
 $column-gap-small:                  0.75rem !default;
-$column-gap-normal:                 $column-gap !default;
+$column-gap-normal:                 1rem !default;
 $column-gap-medium:                 1.75rem !default;
 $column-gap-large:                  3rem !default;
 $column-gap-larger:                 3.75rem !default;
@@ -61,3 +71,5 @@ $border-1:                          $border-size-1 solid $border;
 // Offcanvas
 $offcanvas-width:                   350px !default;
 $offcanvas-brand-height:            35px !default;
+
+$scroll-margin-top:                 120px !default;

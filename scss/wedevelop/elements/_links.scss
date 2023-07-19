@@ -5,24 +5,6 @@ a {
     transition: $transition-1;
 }
 
-.has-link-opaque {
-    opacity: 0.5;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.has-links-opaque {
-    a {
-        opacity: 0.5;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-}
-
 //=======================================================
 //  LINK COLORS
 //=======================================================
@@ -48,11 +30,8 @@ a {
             }
         }
     }
-}
 
-@each $name, $pair in $colors {
-    $color: nth($pair, 1);
-
+    // MULTIPLE LINKS HOVER
     .has-links-hover-#{$name} {
         a:not(.button) {
             &:hover {

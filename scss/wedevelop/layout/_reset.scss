@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+
+    .element {
+        scroll-margin-top: $scroll-margin-top;
+    }
+
+    #footer {
+        margin-top: auto;
+    }
+}

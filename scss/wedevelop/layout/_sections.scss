@@ -2,16 +2,6 @@
 //  SECTIONS
 //=======================================================
 .section:not(li) {
-  padding: $section-padding-normal $column-gap;
-
-  // SPACINGS SIZES
-  @each $name, $value in $section-paddings {
-    &.is-#{$name} {
-      padding-top: $value;
-      padding-bottom: $value;
-    }
-  }
-
   // REMOVE DOUBLE PADDING
   &:not([class*="has-background-"]):not(.is-styled):not(.visual) {
     + .section:not([class*="has-background-"]):not(.is-styled):not(.visual),
@@ -33,11 +23,4 @@
       }
     }
   }
-}
-
-@include touch {
-    .section:not(li):not(.is-smaller):not(.is-smallest):not(.is-none) {
-        padding-top: $section-padding-mobile;
-        padding-bottom: $section-padding-mobile;
-    }
 }

@@ -21,6 +21,26 @@
     border-radius: $radius !important;
 }
 
+.has-borders {
+    border: $border-1 !important;
+}
+
+.has-border-top {
+    border-top: $border-1 !important;
+}
+
+.has-border-bottom {
+    border-bottom: $border-1 !important;
+}
+
+.has-border-left {
+    border-left: $border-1 !important;
+}
+
+.has-border-right {
+    border-left: $border-1 !important;
+}
+
 //=======================================================
 //  OPACITIES
 //=======================================================
@@ -127,8 +147,8 @@ $viewports: (
         }
 
         @each $name, $value in $column-gaps {
-            &.has-gap-#{$name}-desktop,
-            &.has-gap-x-#{$name}-desktop {
+            .has-gap-#{$name}-#{$viewport},
+            .has-gap-x-#{$name}-#{$viewport} {
                 margin-left: -$value;
                 margin-right: -$value;
 
@@ -138,8 +158,8 @@ $viewports: (
                 }
             }
 
-            &.has-gap-#{$name}-desktop,
-            &.has-gap-y-#{$name}-desktop {
+            .has-gap-#{$name}-#{$viewport},
+            .has-gap-y-#{$name}-#{$viewport} {
                 margin-top: -$value;
 
                 &:last-child {
