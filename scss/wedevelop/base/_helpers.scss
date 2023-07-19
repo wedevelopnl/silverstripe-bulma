@@ -9,12 +9,8 @@
     position: static !important;
 }
 
-.is-letter-spaced {
-    letter-spacing: $extra-letter-spacing !important;
-}
-
-.has-transition {
-    transition: $transition-1 !important;
+.is-sticky {
+    position: sticky !important;
 }
 
 .has-shadow {
@@ -23,18 +19,6 @@
 
 .has-radius {
     border-radius: $radius !important;
-}
-
-.text-left {
-    text-align: left !important;
-}
-
-.text-center {
-    text-align: center !important;
-}
-
-.text-right {
-    text-align: right !important;
 }
 
 //=======================================================
@@ -68,15 +52,6 @@
   .has-order-#{$order} {
     order: $order !important;
   }
-}
-
-//=======================================================
-//  STICKY
-//=======================================================
-.is-sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 //=======================================================
@@ -117,13 +92,6 @@
 }
 
 //=======================================================
-//  POINTERS
-//=======================================================
-.pointer-events-none {
-    pointer-events: none;
-}
-
-//=======================================================
 //  CARDS EQUAL
 //=======================================================
 .has-cards-equal {
@@ -157,6 +125,34 @@ $viewports: (
                 order: $order !important;
             }
         }
+
+        @each $name, $value in $column-gaps {
+            &.has-gap-#{$name}-desktop,
+            &.has-gap-x-#{$name}-desktop {
+                margin-left: -$value;
+                margin-right: -$value;
+
+                > .column {
+                    padding-left: $value;
+                    padding-right: $value;
+                }
+            }
+
+            &.has-gap-#{$name}-desktop,
+            &.has-gap-y-#{$name}-desktop {
+                margin-top: -$value;
+
+                &:last-child {
+                    margin-bottom: -$value;
+                }
+
+                > .column {
+                    padding-top: $value;
+                    padding-bottom: $value;
+                }
+            }
+        }
+
         @each $property, $shortcut in $spacing-shortcuts {
             @each $name, $value in $spacing-values {
                 // All directions

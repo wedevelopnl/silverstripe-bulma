@@ -5,7 +5,7 @@
   padding: $section-padding-normal $column-gap;
 
   // SPACINGS SIZES
-  @each $name, $value in $sectionPaddings {
+  @each $name, $value in $section-paddings {
     &.is-#{$name} {
       padding-top: $value;
       padding-bottom: $value;

@@ -1,14 +1,32 @@
 .button {
-    &.is-text {
-        text-decoration: none;
+    font-size: $button-font-size-normal;
+    height: $button-height-normal;
+
+    &.is-square,
+    &.is-circle {
+        width: $button-height-normal;
+        padding: {
+            left: 0;
+            right: 0;
+        }
     }
 
-    &.is-square {
-        padding: $control-padding-vertical;
+    &.is-circle {
+        border-radius: 50%;
+    }
 
-        .svg-icon {
-            min-height: $control-line-height;
-            min-width: $control-line-height;
+    @each $name, $values in $button-sizes {
+        $height: nth($values, 1);
+        $font-size: nth($values, 2);
+
+        &.is-#{$name} {
+            height: $height;
+            font-size: $font-size;
+
+            &.is-square,
+            &.is-circle {
+                width: $height;
+            }
         }
     }
 }

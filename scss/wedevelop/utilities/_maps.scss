@@ -1,0 +1,101 @@
+// CUSTOM COLUMN GAPS
+$column-gaps: (
+    "none":                     $column-gap-none,
+    "smallest":                 8px,
+    "smaller":                  12px,
+    "small":                    24px,
+    "normal":                   $column-gap-normal,
+    "medium":                   28px,
+    "large":                    48px,
+    "larger":                   60px,
+);
+
+$list-gutters: (
+    "none":             0,
+    "smallest":         $list-gutter-smallest,
+    "smaller":          $list-gutter-smaller,
+    "small":            $list-gutter-small,
+    "normal":           $list-gutter-normal,
+    "medium":           $list-gutter-medium,
+    "large":            $list-gutter-large,
+    "larger":           $list-gutter-larger,
+) !default;
+
+// OPACITIES
+$opacities: (
+    "0":                0,
+    "10":               0.1,
+    "25":               0.25,
+    "33":               0.33,
+    "50":               0.5,
+    "66":               0.66,
+    "75":               0.75,
+    "85":               0.85,
+    "100":              1
+) !default;
+
+// INDEXES
+$indexes: (
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+) !default;
+
+// ORDERS
+$orders: (
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+) !default;
+
+$visual-sizes: (
+    "none":             0,
+    "smaller":          $visual-height-smaller,
+    "small":            $visual-height-small,
+    "normal":           $visual-height-normal,
+    "medium":           $visual-height-medium,
+    "large":            $visual-height-large,
+    "larger":           $visual-height-larger,
+    "full-screen":      100vh,
+) !default;
+
+$control-sizes: (
+    "small":            ($control-padding-vertical-small, $control-padding-horizontal-small, $control-line-height-small, $control-font-size-small),
+    "normal":           ($control-padding-vertical, $control-padding-horizontal, $control-line-height, $control-font-size),
+    "large":            ($control-padding-vertical-large, $control-padding-horizontal-large, $control-line-height-large, $control-font-size-large),
+) !default;
+
+$spacing-values: (
+    "0":                0,              // 0px
+    "1":                0.125rem,       // 2px
+    "2":                0.25rem,        // 4px
+    "3":                0.5rem,         // 8px
+    "4":                0.75rem,        // 12px
+    "5":                1rem,           // 16px
+    "6":                1.25rem,        // 20px
+    "7":                1.5rem,         // 24px
+    "8":                2rem,           // 32px
+    "9":                2.5rem,         // 40px
+    "10":               3rem,           // 48px
+    "11":               3.5rem,         // 56px
+    "12":               4rem,           // 64px
+    "13":               4.5rem,         // 72px
+    "14":               5rem,           // 80px
+    "15":               6rem,           // 96px
+    "16":               7.5rem,         // 120px
+    "17":               8rem,           // 128px
+    "18":               10rem,          // 160px
+    "auto":             auto,           // auto
+) !default;
+
+// Colors
+$custom-colors: (
+    "transparent":      (transparent, $text),
+) !default;
+
+$colors: map-merge($colors, $custom-colors) !default;
+
+$button-sizes: (
+    "smallest":         ($button-height-smallest, $button-font-size-small),
+    "smaller":          ($button-height-smaller, $button-font-size-small),
+    "small":            ($button-height-small, $button-font-size-normal),
+    "normal":           ($button-height-normal, $button-font-size-normal),
+    "medium":           ($button-height-medium, $button-font-size-large) ,
+    "large":            ($button-height-large, $button-font-size-large),
+)
