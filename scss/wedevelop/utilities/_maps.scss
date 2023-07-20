@@ -86,10 +86,8 @@ $custom-colors: (
 $colors: map-merge($colors, $custom-colors) !default;
 
 $button-sizes: (
-    "smallest":         ($button-height-smallest, $button-font-size-small),
-    "smaller":          ($button-height-smaller, $button-font-size-small),
-    "small":            ($button-height-small, $button-font-size-normal),
-    "normal":           ($button-height-normal, $button-font-size-normal),
-    "medium":           ($button-height-medium, $button-font-size-medium) ,
-    "large":            ($button-height-large, $button-font-size-medium),
+    "small":            ($button-font-size-small, $button-padding-y-small, $button-padding-x-small),
+    "normal":           ($button-font-size-normal, $button-padding-y-normal, $button-padding-x-normal),
+    "medium":           ($button-font-size-medium, $button-padding-y-medium, $button-padding-x-medium),
+    "large":            ($button-font-size-large, $button-padding-y-large, $button-padding-x-large),
 )

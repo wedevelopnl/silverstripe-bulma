@@ -1,31 +1,42 @@
 .button {
     font-size: $button-font-size-normal;
-    height: $button-height-normal;
+    padding: calc(#{$button-padding-y-normal} - #{$button-border-width}) calc(#{$button-padding-x-normal} - #{$button-border-width});
+    height: auto;
+    line-height: 1;
+
+    &:not(.is-rounded) {
+        border-radius: $control-radius;
+    }
+
+    &.is-small:not(.is-rounded) {
+        border-radius: $control-radius-small;
+    }
 
     &.is-square,
     &.is-circle {
-        width: $button-height-normal;
+        width: calc($button-font-size-normal + (2 * $button-padding-y-normal));
         padding: {
-            left: 0;
-            right: 0;
+            left: 0 !important;
+            right: 0 !important;
         }
     }
 
     &.is-circle {
-        border-radius: 50%;
+        border-radius: 50% !important;
     }
 
     @each $name, $values in $button-sizes {
-        $height: nth($values, 1);
-        $font-size: nth($values, 2);
+        $font-size: nth($values, 1);
+        $padding-y: nth($values, 2);
+        $padding-x: nth($values, 3);
 
         &.is-#{$name} {
-            height: $height;
             font-size: $font-size;
+            padding: calc(#{$padding-y} - #{$button-border-width}) calc(#{$padding-x} - #{$button-border-width});
 
             &.is-square,
             &.is-circle {
-                width: $height;
+                width: calc($font-size + (2 * $padding-y));
             }
         }
     }
