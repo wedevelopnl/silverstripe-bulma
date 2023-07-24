@@ -12,9 +12,14 @@
         border-radius: $control-radius-small;
     }
 
+    &.is-even {
+        padding: calc(#{$button-padding-y-normal} - #{$button-border-width});
+    }
+
     &.is-square,
     &.is-circle {
         width: calc($button-font-size-normal + (2 * $button-padding-y-normal));
+        height: calc($button-font-size-normal + (2 * $button-padding-y-normal));
         padding: {
             left: 0 !important;
             right: 0 !important;
@@ -34,8 +39,13 @@
             font-size: $font-size;
             padding: calc(#{$padding-y} - #{$button-border-width}) calc(#{$padding-x} - #{$button-border-width});
 
+            &.is-even {
+                padding: calc(#{$padding-y} - #{$button-border-width});
+            }
+
             &.is-square,
             &.is-circle {
+                height: calc($font-size + (2 * $padding-y));
                 width: calc($font-size + (2 * $padding-y));
             }
         }

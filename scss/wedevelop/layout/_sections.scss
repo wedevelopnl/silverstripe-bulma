@@ -2,25 +2,28 @@
 //  SECTIONS
 //=======================================================
 .section:not(li) {
-  // REMOVE DOUBLE PADDING
-  &:not([class*="has-background-"]):not(.is-styled):not(.visual) {
-    + .section:not([class*="has-background-"]):not(.is-styled):not(.visual),
-    + .section.has-background-gradient {
-      padding-top: 0;
-    }
-  }
+    padding-left: $column-gap;
+    padding-right: $column-gap;
 
-  &.has-background-gradient {
-    + .section:not([class*="has-background-"]):not(.is-styled):not(.visual) {
-      padding-top: 0;
+    // REMOVE DOUBLE PADDING
+    &:not([class*="has-background-"]):not(.is-styled):not(.visual) {
+        + .section:not([class*="has-background-"]):not(.is-styled):not(.visual),
+        + .section.has-background-gradient {
+            padding-top: 0;
+        }
     }
-  }
 
-  @each $name, $pair in $colors {
-    &.has-background-#{$name}:not(.is-styled):not(.visual) {
-      + .section.has-background-#{$name}:not(.is-styled):not(.visual) {
-        padding-top: 0;
-      }
+    &.has-background-gradient {
+        + .section:not([class*="has-background-"]):not(.is-styled):not(.visual) {
+            padding-top: 0;
+        }
     }
-  }
+
+    @each $name, $pair in $colors {
+        &.has-background-#{$name}:not(.is-styled):not(.visual) {
+            + .section.has-background-#{$name}:not(.is-styled):not(.visual) {
+                padding-top: 0;
+            }
+        }
+    }
 }

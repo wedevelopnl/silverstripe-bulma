@@ -1,14 +1,15 @@
 // CUSTOM COLUMN GAPS
 $column-gaps: (
     "none":                     $column-gap-none,
-    "smallest":                 8px,
-    "smaller":                  12px,
-    "small":                    24px,
+    "smallest":                 $column-gap-smallest,
+    "smaller":                  $column-gap-smaller,
+    "small":                    $column-gap-small,
     "normal":                   $column-gap-normal,
-    "medium":                   28px,
-    "large":                    48px,
-    "larger":                   60px,
-);
+    "medium":                   $column-gap-medium,
+    "large":                    $column-gap-large,
+    "larger":                   $column-gap-larger,
+    "largest":                  $column-gap-largest,
+) !default;
 
 $list-gutters: (
     "none":             0,
@@ -19,6 +20,15 @@ $list-gutters: (
     "medium":           $list-gutter-medium,
     "large":            $list-gutter-large,
     "larger":           $list-gutter-larger,
+) !default;
+
+$line-heights: (
+    "none":             0,
+    "small":            $line-height-small,
+    "normal":           $line-height-normal,
+    "medium":           $line-height-medium,
+    "large":            $line-height-large,
+    "larger":           $line-height-larger,
 ) !default;
 
 // OPACITIES
@@ -56,26 +66,26 @@ $visual-sizes: (
 ) !default;
 
 $spacing-values: (
-    "0":                0,              // 0px
-    "1":                0.125rem,       // 2px
-    "2":                0.25rem,        // 4px
-    "3":                0.5rem,         // 8px
-    "4":                0.75rem,        // 12px
-    "5":                1rem,           // 16px
-    "6":                1.25rem,        // 20px
-    "7":                1.5rem,         // 24px
-    "8":                2rem,           // 32px
-    "9":                2.5rem,         // 40px
-    "10":               3rem,           // 48px
-    "11":               3.5rem,         // 56px
-    "12":               4rem,           // 64px
-    "13":               4.5rem,         // 72px
-    "14":               5rem,           // 80px
-    "15":               6rem,           // 96px
-    "16":               7.5rem,         // 120px
-    "17":               8rem,           // 128px
-    "18":               10rem,          // 160px
-    "auto":             auto,           // auto
+    "0":                $spacing-0,             // 0px
+    "1":                $spacing-1,             // 2px
+    "2":                $spacing-2,             // 4px
+    "3":                $spacing-3,             // 8px
+    "4":                $spacing-4,             // 12px
+    "5":                $spacing-5,             // 16px
+    "6":                $spacing-6,             // 20px
+    "7":                $spacing-7,             // 24px
+    "8":                $spacing-8,             // 32px
+    "9":                $spacing-9,             // 40px
+    "10":               $spacing-10,            // 48px
+    "11":               $spacing-11,            // 56px
+    "12":               $spacing-12,            // 64px
+    "13":               $spacing-13,            // 72px
+    "14":               $spacing-14,            // 80px
+    "15":               $spacing-15,            // 96px
+    "16":               $spacing-16,            // 120px
+    "17":               $spacing-17,            // 128px
+    "18":               $spacing-18,            // 160px
+    "auto":             $spacing-auto,          // auto
 ) !default;
 
 // Colors

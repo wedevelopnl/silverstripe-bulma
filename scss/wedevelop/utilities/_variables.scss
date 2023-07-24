@@ -1,20 +1,44 @@
 //=======================================================
 //  BUTTON SIZES
 //=======================================================
-$button-font-size-small:                   1rem !default;           // 16px
-$button-font-size-normal:                  1.125rem !default;       // 18px
-$button-font-size-medium:                  1.25rem !default;        // 20px
-$button-font-size-large:                  1.25rem !default;         // 20px
+$button-font-size-small:            1rem !default;          // 16px
+$button-font-size-normal:           1.125rem !default;      // 18px
+$button-font-size-medium:           1.25rem !default;       // 20px
+$button-font-size-large:            1.25rem !default;       // 20px
 
-$button-padding-y-small:                   0.75rem !default;        // 12px
-$button-padding-y-normal:                  1rem !default;           // 16px
-$button-padding-y-medium:                  1.25rem !default;        // 20px
-$button-padding-y-large:                  1.5rem !default;         // 24px
+$button-padding-y-small:            0.75rem !default;       // 12px
+$button-padding-y-normal:           1rem !default;          // 16px
+$button-padding-y-medium:           1.25rem !default;       // 20px
+$button-padding-y-large:            1.5rem !default;        // 24px
 
-$button-padding-x-small:                   1.5rem !default;           // 24px
-$button-padding-x-normal:                  2rem !default;           // 32px
-$button-padding-x-medium:                  2.5rem !default;        // 40px
-$button-padding-x-large:                  3rem !default;         // 48px
+$button-padding-x-small:            1.5rem !default;        // 24px
+$button-padding-x-normal:           2rem !default;          // 32px
+$button-padding-x-medium:           2.5rem !default;        // 40px
+$button-padding-x-large:            3rem !default;          // 48px
+
+//=======================================================
+//  SPACINGS
+//=======================================================
+$spacing-0:                     0 !default;                 // 0px
+$spacing-1:                     0.125rem !default;          // 2px
+$spacing-2:                     0.25rem !default;           // 4px
+$spacing-3:                     0.5rem !default;            // 8px
+$spacing-4:                     0.75rem !default;           // 12px
+$spacing-5:                     1rem !default;              // 16px
+$spacing-6:                     1.25rem !default;           // 20px
+$spacing-7:                     1.5rem !default;            // 24px
+$spacing-8:                     2rem !default;              // 32px
+$spacing-9:                     2.5rem !default;            // 40px
+$spacing-10:                    3rem !default;              // 48px
+$spacing-11:                    3.5rem !default;            // 56px
+$spacing-12:                    4rem !default;              // 64px
+$spacing-13:                    4.5rem !default;            // 72px
+$spacing-14:                    5rem !default;              // 80px
+$spacing-15:                    6rem !default;              // 96px
+$spacing-16:                    7.5rem !default;            // 120px
+$spacing-17:                    8rem !default;              // 128px
+$spacing-18:                    10rem !default;             // 160px
+$spacing-auto:                  auto !default;              // auto
 
 //=======================================================
 //  CONTENT TITLE SIZES
@@ -25,6 +49,15 @@ $content-h3-size:                   $size-4 !default;
 $content-h4-size:                   $size-5 !default;
 $content-h5-size:                   $size-6 !default;
 $content-h6-size:                   $size-7 !default;
+
+//=======================================================
+//  LINE-HEIGHTS
+//=======================================================
+$line-height-larger:                2 !default;
+$line-height-large:                 1.75 !default;
+$line-height-medium:                1.25 !default;
+$line-height-normal:                1.125 !default;
+$line-height-small:                 1 !default;
 
 //=======================================================
 //  COLUMN GAPS
@@ -39,6 +72,9 @@ $column-gap-large:                  3rem !default;
 $column-gap-larger:                 3.75rem !default;
 $column-gap-largest:                5rem !default;
 
+$column-gap:                        16px !default;
+$gap:                               2 * $column-gap !default;
+
 //=======================================================
 //  LIST GUTTERS
 //=======================================================
@@ -46,10 +82,10 @@ $list-gutter-smallest:              0.25rem !default;
 $list-gutter-smaller:               0.5rem !default;
 $list-gutter-small:                 0.75rem !default;
 $list-gutter-normal:                1rem !default;
-$list-gutter-normal:                1.5rem !default;
-$list-gutter-medium:                2rem !default;
-$list-gutter-large:                 3rem !default;
-$list-gutter-larger:                3.5rem !default;
+$list-gutter-medium:                1.5rem !default;
+$list-gutter-large:                 2rem !default;
+$list-gutter-larger:                3rem !default;
+$list-gutter-largest:               3.5rem !default;
 
 //=======================================================
 //  VISUAL HEIGHTS
@@ -61,16 +97,16 @@ $visual-height-medium:              500px !default;
 $visual-height-large:               650px !default;
 $visual-height-larger:              800px !default;
 
-$overlay:                    rgba($black, 0.4);
+$overlay:                           rgba($black, 0.4) !default;
 
 // TRANSITIONS
-$transition-time:                   0.25s;
-$transition-animation:              ease-out;
-$transition-1:                      all $transition-time $transition-animation;
+$transition-time:                   0.25s !default;
+$transition-animation:              ease-out !default;
+$transition-1:                      all $transition-time $transition-animation !default;
 
 // BORDER
-$border-size-1:                     1px;
-$border-1:                          $border-size-1 solid $border;
+$border-size-1:                     1px !default;
+$border-1:                          $border-size-1 solid $border !default;
 
 // Offcanvas
 $offcanvas-width:                   350px !default;
