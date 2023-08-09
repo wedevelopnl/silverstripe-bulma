@@ -1,0 +1,51 @@
+//=======================================================
+//  CONTENT
+//=======================================================
+strong {
+    color: unset;
+}
+
+address {
+    font-style: normal;
+}
+
+//=======================================================
+//  TITLES
+//=======================================================
+.title,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-family: $title-family;
+    font-weight: $title-weight;
+    color: unset;
+}
+
+.content {
+    h1 {
+        font-size: $content-h1-size;
+    }
+
+    h2 {
+        font-size: $content-h2-size;
+    }
+
+    h3 {
+        font-size: $content-h3-size;
+    }
+
+    h4 {
+        font-size: $content-h4-size;
+    }
+
+    h5 {
+        font-size: $content-h5-size;
+    }
+
+    h6 {
+        font-size: $content-h6-size;
+    }
+}

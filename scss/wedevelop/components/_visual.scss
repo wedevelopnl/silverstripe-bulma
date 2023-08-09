@@ -1,0 +1,40 @@
+//=======================================================
+//  VISUAL
+//=======================================================
+.visual {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &.has-overlay {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 10;
+            inset: 0;
+            background-color: $overlay;
+            pointer-events: none;
+        }
+
+        > * {
+            position: relative;
+            z-index: 20;
+        }
+    }
+
+    // SIZES
+    @each $name, $value in $visual-sizes {
+        &.is-#{$name} {
+            min-height: $value;
+        }
+    }
+}
+
+@include until($desktop) {
+    .visual:not(.is-full-screen) {
+        min-height: 0;
+    }
+}

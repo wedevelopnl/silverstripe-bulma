@@ -1,0 +1,24 @@
+.off-canvas {
+    background-color: $white;
+    position: fixed;
+    z-index: 200;
+    width: $offcanvas-width;
+    max-width: calc(100vw - #{$gap});
+    top: 0;
+    bottom: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-shadow: $shadow;
+    right: -($offcanvas-width + 20px);
+    display: flex;
+    flex-direction: column;
+    transition: right $transition-time $transition-animation;
+
+    &.is-active {
+        right: 0;
+    }
+}
+
+.toggle-off-canvas {
+    cursor: pointer;
+}

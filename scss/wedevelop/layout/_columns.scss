@@ -1,0 +1,27 @@
+//=======================================================
+//  COLUMNS
+//
+//  Fixes a responsive behaviour bulma does, that doesn't
+//  fit our grid module
+//=======================================================
+.container {
+    &.is-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.column {
+    width: 100%;
+    flex-basis: auto;
+    flex-grow: unset;
+    flex-shrink: 0;
+
+    // ADD BULMA DEFAULT COLUMN CLASS
+    &.is-fill {
+        width: unset;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}

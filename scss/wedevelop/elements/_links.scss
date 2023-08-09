@@ -1,0 +1,42 @@
+//=======================================================
+//  LINKS
+//=======================================================
+a {
+    transition: $transition-1;
+}
+
+//=======================================================
+//  LINK COLORS
+//=======================================================
+@each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    // SINGLE LINK
+    a:not(.button) {
+        &.has-hover-#{$name} {
+            &:hover {
+                color: $color !important;
+            }
+        }
+    }
+
+    // MULTIPLE LINKS
+    .has-links-#{$name} {
+        a:not(.button) {
+            color: $color;
+
+            &:hover {
+                color: darken($color, 10);
+            }
+        }
+    }
+
+    // MULTIPLE LINKS HOVER
+    .has-links-hover-#{$name} {
+        a:not(.button) {
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+}

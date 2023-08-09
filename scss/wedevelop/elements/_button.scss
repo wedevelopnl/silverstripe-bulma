@@ -1,0 +1,53 @@
+.button {
+    font-size: $button-font-size-normal;
+    padding: calc(#{$button-padding-y-normal} - #{$button-border-width}) calc(#{$button-padding-x-normal} - #{$button-border-width});
+    height: auto;
+    line-height: 1;
+
+    &:not(.is-rounded) {
+        border-radius: $control-radius;
+    }
+
+    &.is-small:not(.is-rounded) {
+        border-radius: $control-radius-small;
+    }
+
+    &.is-even {
+        padding: calc(#{$button-padding-y-normal} - #{$button-border-width});
+    }
+
+    &.is-square,
+    &.is-circle {
+        width: calc($button-font-size-normal + (2 * $button-padding-y-normal));
+        height: calc($button-font-size-normal + (2 * $button-padding-y-normal));
+        padding: {
+            left: 0 !important;
+            right: 0 !important;
+        }
+    }
+
+    &.is-circle {
+        border-radius: 50% !important;
+    }
+
+    @each $name, $values in $button-sizes {
+        $font-size: nth($values, 1);
+        $padding-y: nth($values, 2);
+        $padding-x: nth($values, 3);
+
+        &.is-#{$name} {
+            font-size: $font-size;
+            padding: calc(#{$padding-y} - #{$button-border-width}) calc(#{$padding-x} - #{$button-border-width});
+
+            &.is-even {
+                padding: calc(#{$padding-y} - #{$button-border-width});
+            }
+
+            &.is-square,
+            &.is-circle {
+                height: calc($font-size + (2 * $padding-y));
+                width: calc($font-size + (2 * $padding-y));
+            }
+        }
+    }
+}

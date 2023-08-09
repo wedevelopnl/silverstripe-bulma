@@ -1,0 +1,92 @@
+.list {
+    display: flex;
+    flex-direction: column;
+
+    > li,
+    > .list-item {
+        > a,
+        > span {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    // VERTICAL
+    &:not(.is-horizontal) {
+        margin-top: -($list-gutter-normal / 2);
+        margin-bottom: -($list-gutter-normal / 2);
+
+        > li,
+        > .list-item {
+            padding-top: ($list-gutter-normal / 2);
+            padding-bottom: ($list-gutter-normal / 2);
+        }
+
+        @each $name, $value in $list-gutters {
+            &.is-#{$name} {
+                margin-top: -($value / 2);
+                margin-bottom: -($value / 2);
+
+                > li,
+                > .list-item,
+                > a,
+                > span {
+                    padding-top: ($value / 2);
+                    padding-bottom: ($value / 2);
+                }
+            }
+        }
+
+        // GUTTERLESS
+        &.is-gutterless {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            > li,
+            > .list-item {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    // HORIZONTAL
+    &.is-horizontal {
+        margin-left: -($list-gutter-normal / 2);
+        margin-right: -($list-gutter-normal / 2);
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        > li,
+        > .list-item {
+            padding-left: ($list-gutter-normal / 2);
+            padding-right: ($list-gutter-normal / 2);
+        }
+
+        // SPACINGS SIZES
+        @each $name, $value in $list-gutters {
+            &.is-#{$name} {
+                margin-left: -($value / 2);
+                margin-right: -($value / 2);
+
+                > li,
+                > .list-item {
+                    padding-left: ($value / 2);
+                    padding-right: ($value / 2);
+                }
+            }
+        }
+
+        // GUTTERLESS
+        &.is-gutterless {
+            margin-left: 0;
+            margin-right: 0;
+
+            > li,
+            > .list-item {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+//=======================================================
+//  SECTIONS
+//=======================================================
+.section:not(li) {
+    padding-left: $column-gap;
+    padding-right: $column-gap;
+
+    // REMOVE DOUBLE PADDING
+    &:not([class*="has-background-"]):not(.is-styled):not(.visual) {
+        + .section:not([class*="has-background-"]):not(.is-styled):not(.visual),
+        + .section.has-background-gradient {
+            padding-top: 0 !important;
+        }
+    }
+
+    &.has-background-gradient {
+        + .section:not([class*="has-background-"]):not(.is-styled):not(.visual) {
+            padding-top: 0 !important;
+        }
+    }
+
+    @each $name, $pair in $colors {
+        &.has-background-#{$name}:not(.is-styled):not(.visual) {
+            + .section.has-background-#{$name}:not(.is-styled):not(.visual) {
+                padding-top: 0 !important;
+            }
+        }
+    }
+}
