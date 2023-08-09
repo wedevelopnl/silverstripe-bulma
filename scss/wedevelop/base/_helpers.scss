@@ -120,6 +120,19 @@
     }
 }
 
+// Absolute spacers `.is-t-0`, `.is-l-5`, etc.
+@each $direction, $suffix in $spacing-directions {
+    @each $name, $value in $spacing-values {
+        .is-#{$suffix}-#{$name} {
+            #{$direction}: $value !important;
+        }
+
+        .is-i-#{$name} {
+            inset: $value !important;
+        }
+    }
+}
+
 //=======================================================
 //  CARDS EQUAL
 //=======================================================
@@ -149,6 +162,37 @@ $viewports: (
     $until: nth($sizes, 2);
 
     @media (min-width: $from) and (max-width: $until) {
+        .is-relative-#{$viewport} {
+            position: relative !important;
+        }
+
+        .is-absolute-#{$viewport} {
+            position: absolute !important;
+        }
+
+        .is-static-#{$viewport} {
+            position: static !important;
+        }
+
+        .is-sticky-#{$viewport} {
+            position: sticky !important;
+        }
+
+        // Absolute spacers `.is-t-0-desktop`, `.is-l-5-widescreen`, etc.
+        @each $direction, $suffix in $spacing-directions {
+            @each $name, $value in $spacing-values {
+                .is-#{$suffix}-#{$name}-#{$viewport} {
+                    #{$direction}: $value !important;
+                }
+            }
+        }
+
+        @each $name, $value in $spacing-values {
+            .is-i-#{$name}-#{$viewport} {
+                inset: $value !important;
+            }
+        }
+
         @each $order, $value in $orders {
             .has-order-#{$order}-#{$viewport} {
                 order: $order !important;
