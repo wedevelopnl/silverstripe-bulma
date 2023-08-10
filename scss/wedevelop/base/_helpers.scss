@@ -120,14 +120,14 @@
     }
 }
 
-// Absolute spacers `.is-t-0`, `.is-l-5`, etc.
+// Absolute spacers `.t-0`, `.l-5`, etc.
 @each $direction, $suffix in $spacing-directions {
     @each $name, $value in $spacing-values {
-        .is-#{$suffix}-#{$name} {
+        .#{$suffix}-#{$name} {
             #{$direction}: $value !important;
         }
 
-        .is-i-#{$name} {
+        .i-#{$name} {
             inset: $value !important;
         }
     }
@@ -178,17 +178,17 @@ $viewports: (
             position: sticky !important;
         }
 
-        // Absolute spacers `.is-t-0-desktop`, `.is-l-5-widescreen`, etc.
+        // Absolute spacers `.t-0-desktop`, `.l-5-widescreen`, etc.
         @each $direction, $suffix in $spacing-directions {
             @each $name, $value in $spacing-values {
-                .is-#{$suffix}-#{$name}-#{$viewport} {
+                .#{$suffix}-#{$name}-#{$viewport} {
                     #{$direction}: $value !important;
                 }
             }
         }
 
         @each $name, $value in $spacing-values {
-            .is-i-#{$name}-#{$viewport} {
+            .i-#{$name}-#{$viewport} {
                 inset: $value !important;
             }
         }
