@@ -6,7 +6,7 @@
     line-height: 1;
     display: inline-block;
 
-    &.has-current-color {
+    &:not(.has-no-fill) {
         svg {
             path {
                 fill: currentColor !important;
