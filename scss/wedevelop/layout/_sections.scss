@@ -13,12 +13,6 @@
         }
     }
 
-    &.has-background-gradient {
-        + .section:not([class*="has-background-"]):not(.is-styled):not(.visual) {
-            padding-top: 0 !important;
-        }
-    }
-
     @each $name, $pair in $colors {
         &.has-background-#{$name}:not(.is-styled):not(.visual) {
             + .section.has-background-#{$name}:not(.is-styled):not(.visual) {
