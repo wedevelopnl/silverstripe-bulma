@@ -33,6 +33,8 @@
 
     &.checkbox,
     &.radio {
+        cursor: initial;
+
         label,
         .label {
             display: inline;
@@ -41,10 +43,21 @@
     }
 
     &.textarea {
-        display: inline;
+        display: block;
         outline: none;
         border: 0;
-        padding: 0;
+        box-shadow: none;
+        max-height: unset;
+        min-height: unset;
+        height: auto;
+
+        &:focus,
+        &.is-focused,
+        &:active,
+        &.is-active {
+            box-shadow: none;
+            border: none;
+        }
     }
 }
 
@@ -69,6 +82,8 @@ select {
 
 .btn-toolbar {
     margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
 
     .action {
         @extend .button;
